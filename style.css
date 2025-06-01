@@ -1,109 +1,52 @@
-/* Reset dan font */
+/* Reset dan variabel warna */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+}
+:root {
+  --bg-main: #0a1f44;
+  --text-light: #fff;
+  --text-dark: #1e2432;
+  --highlight: #ff8c00;
 }
 
+/* Body dan font */
 body {
-  background-color: #000;
-  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-dark);
+  padding: 50px;
 }
 
-/* Navigasi */
+/* Header */
 header {
-  background-color: #111;
-  padding: 20px 40px;
-  border-bottom: 1px solid #444;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 2px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #fff;
-}
-
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: linear-gradient(to bottom right, #111, #333);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 0 20px;
+  color: var(--text-light);
 }
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  color: #aaa;
-  margin-bottom: 30px;
-}
-
-.cta-button {
-  padding: 12px 25px;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  text-transform: uppercase;
+header h1 {
+  font-size: 3rem;
   font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
-.cta-button:hover {
-  background-color: #ccc;
+/* Section umum */
+section {
+  margin: 40px 0;
+  color: var(--text-light);
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-top: 40px;
 }

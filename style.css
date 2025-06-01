@@ -10,45 +10,51 @@ body {
 
 /* Header */
 header {
-  background-color: rgba(0, 30, 60, 0.8);
+  background-color: rgba(0, 30, 60, 0.9);
   text-align: center;
-  padding: 2em 1em;
+  padding: 3em 1em;
   color: cyan;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 3.5em;
 }
 
 header p {
   margin-top: 0.5em;
+  font-size: 1.5em;
   color: #fff;
 }
 
-/* Main */
+/* Layout utama menyamping */
 main {
-  max-width: 800px;
-  margin: 2em auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2em;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 3em auto;
   animation: slideUp 1.2s ease;
 }
 
 /* Post */
 .post {
-  margin-bottom: 2em;
-  padding: 1.5em;
+  flex: 1 1 40%;
+  min-width: 300px;
   background-color: rgba(255, 255, 255, 0.1);
+  padding: 2em;
   border-left: 4px solid cyan;
-  border-radius: 5px;
+  border-radius: 10px;
   animation: fadeIn 2s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
 .post h2 {
   color: cyan;
   margin-top: 0;
+  font-size: 1.8em;
 }
 
 .post .date {
@@ -66,4 +72,11 @@ main {
 @keyframes slideUp {
   from { transform: translateY(40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
 }

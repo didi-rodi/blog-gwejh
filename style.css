@@ -1,82 +1,109 @@
-/* Umum */
+/* Reset dan font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
-  background: url('wallpaper.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  animation: fadeIn 1.5s ease;
-}
-
-/* Header */
-header {
-  background-color: rgba(0, 30, 60, 0.9);
-  text-align: center;
-  padding: 3em 1em;
-  color: cyan;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 3.5em;
-}
-
-header p {
-  margin-top: 0.5em;
-  font-size: 1.5em;
+  background-color: #000;
   color: #fff;
 }
 
-/* Layout utama menyamping */
-main {
+/* Navigasi */
+header {
+  background-color: #111;
+  padding: 20px 40px;
+  border-bottom: 1px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2em;
-  flex-wrap: wrap;
-  max-width: 90%;
-  margin: 3em auto;
-  animation: slideUp 1.2s ease;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Post */
-.post {
-  flex: 1 1 40%;
-  min-width: 300px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 2em;
-  border-left: 4px solid cyan;
-  border-radius: 10px;
-  animation: fadeIn 2s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-}
-
-.post h2 {
-  color: cyan;
-  margin-top: 0;
+.logo {
   font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
-.post .date {
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
   color: #ccc;
-  font-size: 0.9em;
-  margin-bottom: 1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Animasi */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.nav-links li a:hover {
+  color: #fff;
 }
 
-@keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #111, #333);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-/* Responsif */
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  main {
-    flex-direction: column;
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    gap: 15px;
   }
 }
